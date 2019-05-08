@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    /* Full height image header */
+
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("assets/plainlogo.png");
+        min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+/* 
+    table stuff */
+    .table-left {
+  border-collapse: collapse;
+  width: 50%;
+  float: left;
+
+}
+.table-center {
+  border-collapse: collapse;
+  width: 50%;
+  margin: auto;
+  
+
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+   border: 1px solid #ddd;
+}
+
+tr:nth-child(even){ color: #000 !important;
+    background-color:#f2f2f2 !important}
+
+    tr:nth-child(odd){ color: #000 !important;
+    background-color:#fff !important}
+
+th {
+    color: #000 !important;
+    background-color: #CA8D4B !important
+}
+/* 
+map stuff */
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-orange w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide">
+                <img class="w3-image w3-round-small" type="image/jpg" src="assets/favicon.png" alt="Logo" width="25" height="25"> H. Home Inspections
+            </a> 
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+                <a href="#service" class="w3-bar-item w3-button">SERVICES</a>
+                <a href="#review" class="w3-bar-item w3-button"> REVIEWS</a>
+                <a href="#pricing" class="w3-bar-item w3-button"> PRICING</a>
+                <a href="#contact" class="w3-bar-item w3-button"> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#service" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+        <a href="#review" onclick="w3_close()" class="w3-bar-item w3-button">REVIEWS</a>
+        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <!-- <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div>  -->
+
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-container" style="padding:128px 16px" id="about">
+        <h2 class="w3-center">About us</h2>
+        <p class="w3-center w3-large">Hansen Home Inspections, PLLC is committed to excellence in every aspect of our business. We uphold a standard of
+            integrity bound by fairness, honesty, and personal responsibility. Above all, we are watchful of our customers'
+            interests and make their concerns the basis of our business. </p>
+
+    </div>
+
+    <!-- Service Section  -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="service">
+        <h2 class="w3-center ">Services offered</h2>
+        <div class="w3-row-padding w3-center" style="margin-top:32px">
+            <div class="w3-quarter">
+                <i class="fa fa-institution w3-margin-bottom w3-jumbo w3-center"></i>
+                <p class="w3-large">Structural</p>
+                <p>Foundation, Grading and Drainage, Roof Structure;
+                    Attic &amp; Crawlspace (where accessible), Walls, Ceilings &amp; Floors, Doors, Windows, Stairways, Fireplace
+                    and Chimney, Porches, Balconies, Decks &amp; Carports.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fa fa-bolt w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Electrical Sytem</p>
+                <p>Service Entrance, Panels, Branch Circuits, Connected
+                        Devices &amp; Fixtures.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fa fa-fire w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Heating & Cooling</p>
+                <p>Heating &amp; Cooling Equipment(weather permitting for some AC
+                        systems), Duct System, Chases &amp; Vents.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fa fa-bathtub w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Plumbing Systems</p>
+                <p>Plumbing Supply, Distribution Systems &amp; Fixtures, Drains,
+                        Wastes, and Vents, Water Heating Equipment, Hydro-Massage
+                        Therapy Equipment.</p>
+            </div>
+            </div>
+            <div class="w3-center" style="margin-top:64px">
+            <div class="w3-third">
+                    <i class="fa fa-plug w3-margin-bottom w3-jumbo"></i>
+                    <p class="w3-large">Appliances</p>
+                    <p>Dishwasher(s), Garbage Disposal, Range Hood &amp; Exhaust,
+                            Stove, Oven &amp; Cooktop, Microwave, Bathroom Vents &amp;
+                            Heaters, Garage Door Opener, Dryer Venting.</p>
+                </div>
+            <div class="w3-third">
+                <i class="fa fa-handshake-o w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Optional Systems</p>
+                <p>Sprinklers, Outbuildings, Pools, Hot Tubs, Spas, Wells,
+                        and Septic Systems.</p>
+            </div>
+            <div class="w3-third">
+                <i class="fa fa-home w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Types of Structures</p>
+                <p>Single Family Homes; Multi-Family Homes (up to 4 units);
+                        Condominiums, Apartment Rentals.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Section -->
+    <div class="w3-container" style="padding:128px 16px" id="review">
+        <h2 class="w3-center">Reviews</h2>
+            
+        <p class="w3-large w3-center">Don't just take our word, hear it from our customers!</p>
+            <div class="w3-center">
+                    <img src="assets/homeadvisor.png" style="width:30%"> 
+                </div>
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+    
+     
+        <div class="w3-half w3-container">
+                        <img src="assets/5starflat.png" style="width:30%"> 
+               
+          <h4 class="w3-text-teal">Reviewd by Gerard C. in Austin TX</h4>
+          <h4 class="w3-text-teal">Project: Inspected a home</h4>
+          <p>Mr. Hansen was very thorough, professional, and knowledgeable during his inspection of my new home. I really respect the fact that he was very patient with himself paying attention to every little detail. Thanks for your assistance Chris .</p>
+        </div>
+     
+            <div class="w3-half w3-container">
+                            <img src="assets/5starflat.png" style="width:30%"> 
+                   
+              <h4 class="w3-text-teal">Review by Antornisha D. in Pflugerville, TX</h4>
+              <h4 class="w3-text-teal">Project: Inspect a Home</h4>
+              <p>Chris was amazing! He showed up on time and made sure to explain everything to me in great detail. I will be hiring him for my next home inspection. Thank you so much for your professionalism.</p>
+            </div>
+       
+     
+                <div class="w3-half w3-container">
+                                <img src="assets/5starflat.png" style="width:30%"> 
+                       
+                  <h4 class="w3-text-teal">Review by Maurizio L. in Austin, TX</h4>
+                  <h4 class="w3-text-teal">Project: Inspect a Home</h4>
+                  <p>Chris, was a pleasure to work with. He educated us on subjects we were not familiar with. He made us feel comfortable and at ease that our home was in a great condition. Highly recommend.</p>
+       
+              </div>
+     
+                    <div class="w3-half w3-container">
+                                    <img src="assets/5starflat.png" style="width:30%"> 
+                           
+                      <h4 class="w3-text-teal">Review by Amy D.</h4>
+                      <h4 class="w3-text-teal">Project: Inspect a Home</h4>
+                      <p>Inspector has Quality work and Awesome.</p>
+                    </div>
+            
+                        <div class="w3-half w3-container">
+                                        <img src="assets/5starflat.png" style="width:30%"> 
+                               
+                          <h4 class="w3-text-teal">Review by Dana H.</h4>
+                          <h4 class="w3-text-teal">Project: Inspect a Home</h4>
+                          <p>He did home inspections for me. He showed up on time, did what he said he would and cost exactly what he said it would. Overall very smooth process.</p>
+                        </div>
+                   
+                      
+    
+   
+    
+
+            </div>
+
+    </div>
+
+
+    <!-- Pricing Section -->
+       <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+        <h2 class="w3-center">PRICING</h2>
+        
+        <p class="w3-large">Choose a pricing plan that fits your needs.</p>
+    
+        <table class="table-left">
+                <tr>
+                   <th colspan="2">New Construction</th>
+                  
+                </tr>
+                <tr>
+                  <td> < 1500 sqft </td>
+                  <td>$250</td>
+                 
+                </tr>
+                <tr>
+                  <td>1700-2500 sqft</td>
+                  <td>$300</td>
+                
+                </tr>
+                <tr>
+                  <td>2501-3500 sqft</td>
+                  <td>$350</td>
+                
+                </tr>
+                <tr>
+                  <td>3501-5000 sqft</td>
+                  <td>$400</td>
+              
+              </tr>
+              </table>
+
+              <table class="table-left">
+                    <tr>
+                       <th colspan="2">Old Construction</th>
+                      
+                    </tr>
+                    <tr>
+                      <td> < 1500 sqft </td>
+                      <td>$275</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>1700-2500 sqft</td>
+                      <td>$325</td>
+                    
+                    </tr>
+                    <tr>
+                      <td>2501-3500 sqft</td>
+                      <td>$375</td>
+                    
+                    </tr>
+                    <tr>
+                      <td>3501-5000 sqft</td>
+                      <td>$450</td>
+                  
+                  </tr>
+                  </table>
+                  *New Construction = current*
+                  <table class="table-center">
+                        <tr>
+                           <th colspan="2">Add on(s)</th>
+                          
+                        </tr>
+                        <tr>
+                          <td> 20+ year old home</td>
+                          <td>$50</td>
+                         
+                        </tr>
+                        <tr>
+                          <td>Pier & Beam</td>
+                          <td>$50</td>
+                        
+                        </tr>
+                        <tr>
+                          <td>Irrigation System</td>
+                          <td>$50</td>
+                        
+                        </tr>
+                        <tr>
+                          <td>Swimming Pool</td>
+                          <td>$50</td>
+                      
+                      </tr>
+                      <tr>
+                            <td>Water Wells</td>
+                            <td>$100</td>
+                        
+                        </tr>
+                        <tr>
+                                <td>Septic System</td>
+                                <td>$100</td>
+                            
+                            </tr>
+                      </table>
+
+                      <p class="w3-margin-top">View a sample report to see what you are paying for!</p>
+                      <p><a href="#about" class="w3-button w3-white w3-padding-small w3-large  w3-opacity w3-hover-opacity-off">Sample Report</a></p>
+    </div>
+
+    <div class="w3-container w3-white" style="padding:128px 16px;margin:auto; width: 75%;" id="contact">
+            <h3 class="w3-center">Service Area(s)</h3>
+            <div style="margin-top:48px">
+             
+            </div>
+            <div class="w3-center" id="map"></div>
+            <!-- Replace the value of the key parameter with your own API key. -->
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+            </script>
+<div style="float: left; width: 50%; list-style-type: none;">
+<ul>
+        <li>Austin</li>
+        <li>Round Rock</li>
+        <li>New Braunfels</li>
+        <li>Georgetown</li>
+        <li>Leander</li>
+        <li>Hutto</li>
+      </ul> 
+    </div>
+    <div style="float: right; width: 50%; list-style-type: none;">
+      <ul>
+            <li>Del Valle</li>
+            <li>San Marcos</li>
+            <li>CEdar Park</li>
+            <li>Georgetown</li>
+            <li>Pflugerville</li>
+            <li>Surrounding areas!</li>
+          </ul> 
+        </div>
+       
+
+        </div>
+
+    <!-- Contact Section -->
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Setup your appointment today!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Austin, TX<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-navy w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-orange w3-padding-64">
+        <a href="#home" class="w3-button ">
+            <i class="fa fa-arrow-up w3-margin-right"></i></a>
+    
+      
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+
+        // Initialize and add the map
+function initMap() {
+  // The location of Uluru  
+  var uluru = {lat: 30.266926, lng: -97.750519};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 8, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+
+</body>
+
+</html>
