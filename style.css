@@ -1622,6 +1622,8 @@ a {
     background-color: #9e9e9e !important
 }
 
+
+
 .w3-light-grey,
 .w3-hover-light-grey:hover,
 .w3-light-gray,
@@ -1666,6 +1668,10 @@ a {
 .w3-hover-text-amber:hover {
     color: #ffc107 !important
 }
+.w3-text-grey2,
+.w3-hover-text-grey2:hover {
+    color: #CCCCCC !important
+ }
 
 .w3-text-aqua,
 .w3-hover-text-aqua:hover {
