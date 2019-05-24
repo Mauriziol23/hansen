@@ -325,6 +325,10 @@ a {
     border-bottom: 1px solid #ddd
 }
 
+.w3-bold {
+    font-weight: bold
+}
+
 .w3-striped tbody tr:nth-child(even) {
     background-color: #f1f1f1
 }
