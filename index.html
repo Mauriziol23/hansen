@@ -122,6 +122,63 @@ map stuff */
         width: 100%;
         /* The width is the width of the web page */
     }
+
+
+/* pop up css */
+.popup-box{
+	display: none;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+.popup-inner{
+	max-width: 500px;
+	min-height: 200px;
+	background:#FFF6CC;
+  border-radius: 25px;
+	padding: 15px;
+	margin: auto;
+	top: 25%;
+	position: relative;
+}
+
+
+
+.popup-msg{
+	font-weight: bold;
+	color: black;
+	padding: 20px 20px 0 20px;
+}
+
+.next-step-btn{
+	margin:20px auto 0;
+background: linear-gradient(rgb(204,0,0), rgb(130,0,0));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#015eab', endColorstr='#10276b');
+	border: none !important;
+	padding: 10px 40px !important;
+	color: #fff !important;
+	font-weight: bold;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.transparent-layer{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	opacity: 0.6;
+overflow: hidden;
+
+}
+
+
+
 </style>
 
 <body>
@@ -183,6 +240,34 @@ map stuff */
         </div>
 
     </header>
+
+   <!-- pop up test -->
+
+  <!-- close Modal -->
+
+
+    <div id="hansen">
+   <div class="popup-box" id="hid" style="display: block; visibility: hidden">
+    <div class="transparent-layer"></div>
+    <div class="popup-inner">
+            <div class="w3-container w3-display-container">
+                    <span onclick="document.getElementById('hansen').style.display='none'" class="w3-button w3-display-topright w3-xlarge">x</span>
+                    <br>
+                  
+                </div>
+                <div class="w3-border-amber">
+                        <img src="assets/Drink.png" style="width:100%">
+                        <h2>Hello!.. I am currently on sabbatical</h2>
+                    </div>
+        <div class="w3-container">
+                <h4>(Sorry for the inconvenience, but we all deserve a break!)</h4>
+            </div>
+</div>
+</div>
+</div>
+
+
+
 
     <!-- About Section -->
     <div class="w3-container" style="padding:128px 16px" id="about">
@@ -629,6 +714,12 @@ map stuff */
                 map: map
             });
         }
+
+        // timed popup
+        function showIt() {
+  document.getElementById("hid").style.visibility = "visible";
+}
+setTimeout("showIt()", 2000); // after  seconds
     </script>
 
 </body>
